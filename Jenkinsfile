@@ -16,6 +16,7 @@ pipeline {
         script {
           def antHome = tool 'apache-ant-1.10.5';
           bat "${antHome}/bin/ant -d clean war"
+          
         }
 
         archiveArtifacts(artifacts: '**/*.war', onlyIfSuccessful: true)
